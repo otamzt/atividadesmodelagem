@@ -11,11 +11,11 @@ public record CPFRecord(String valor) {
         CPFRecord cpf3 = new CPFRecord("98765432109");
 
         System.out.println("CPF 1: " + cpf1);
-        System.out.println("CPF 1 é igual a CPF 2? " + cpf1.equals(cpf2)); // true
-        System.out.println("CPF 1 é igual a CPF 3? " + cpf1.equals(cpf3)); // false
+        System.out.println("CPF 1 é igual a CPF 2? " + cpf1.equals(cpf2));
+        System.out.println("CPF 1 é igual a CPF 3? " + cpf1.equals(cpf3)); 
 
         try {
-            CPFRecord cpfInvalido = new CPFRecord("123"); // Lançará IllegalArgumentException
+            CPFRecord cpfInvalido = new CPFRecord("123");
         } catch (IllegalArgumentException e) {
             System.out.println("Erro: " + e.getMessage());
         }
